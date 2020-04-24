@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <div class="container">
+        <app-product-list
+            [currentProduct$]="currentProduct$"
+            [products$]="productList$"
+            (edit)="editProduct($event)"
+            (clearCurrentProduct)="clearCurrentProduct()"
+            (updateProduct)="updateProduct($event)"
+        ></app-product-list>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+/* .slideshow-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to left, #8b86a3, #322e40);
+    opacity: 0.8;
+    height: 670px;
+    content: "";
+  }
+  .slider{
+      width: 100%;
+        position: relative;
+  }
+ .mySlides{
+     width: 100%;
+      height: inherit;
+
+ }
+ img{
+     width: inherit;
+     height: inherit;
+ } */
+ .slider{
+     background: url('../../../../assets/img/image-slider-with-thumbnail1.jpeg');
+    /* background: url(https://smartslider3.com/wp-content/uploads/slider132/image-slider-with-thumbnail1.jpeg) no-repeat; */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 10% 0%;
+    padding: 200px 0 280px 0;
+    position: relative;
+    height: 600px;
+    margin-bottom: 30px;
+ }
+.slider::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #8b86a3, #322e40);
+    opacity: 0.8;
+}
+.slider .block{
+    padding-left: 100px;
+    opacity: 1;
+    color: #e3e3e4;
+    position: absolute;
+}
+.slider .block h1{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 100;
+    font-size: 45px;
+    line-height: 60px;
+    letter-spacing: 5px;
+    padding-bottom: 50px;
+    opacity: 0.8
+    
+}
+.slider .block p{
+    font-size: 50px;
+    opacity: 0.8;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    padding-left: 500px;
+
+}

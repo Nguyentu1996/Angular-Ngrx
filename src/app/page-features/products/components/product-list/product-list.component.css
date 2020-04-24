@@ -1,0 +1,16 @@
+.item{
+    background-color: azure;
+    display: inline-flex;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    width: 290px;
+}
+
+.cardd{
+    width: 285px;
+}
+.detail{
+    width: 285px;
+    padding: 30px 30px 30px 0;
+}

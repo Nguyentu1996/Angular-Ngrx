@@ -1,0 +1,14 @@
+<ng-container *ngIf="products.length > 0 ">
+    <ng-container *ngFor="let product of products; trackBy: trackByFn">
+        <mat-card class="item">
+            <div class="cardd">
+                <h5>{{product.productName}} ({{product.productCode}})</h5>
+                <p>{{product.description}}</p>
+                <span>{{product.starRating}}</span>
+                <div class="detail">
+                    <button mat-raised-button color="accent" (click)="editProduct(product)">Edit</button>
+                </div>
+            </div>
+        </mat-card>
+    </ng-container>
+</ng-container>

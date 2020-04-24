@@ -1,0 +1,62 @@
+<form
+    class="example-form"
+    (ngSubmit)="onSubmit()"
+    [formGroup]="formData"
+>
+<mat-form-field style="display: none;" class="example-full-width">
+    <input
+        matInput
+        formControlName="id"
+    >
+    
+</mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Product Name</mat-label>
+        <input
+            matInput
+            formControlName="productName"
+            (blur)="blur()"
+        >
+        <mat-error *ngIf="displayMessage.productName">
+            {{displayMessage.productName}}
+          </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Product Code</mat-label>
+        <input
+            matInput
+            formControlName="productCode"
+            (blur)="blur()"
+
+        >
+        <mat-error *ngIf="displayMessage.productCode">
+            {{displayMessage.productCode}}
+          </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Description</mat-label>
+        <input
+            matInput
+            formControlName="description"
+
+        >
+        <mat-error *ngIf="displayMessage.description">
+            {{displayMessage.description}}
+          </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Star Rating</mat-label>
+        <input
+            matInput
+            formControlName="starRating"
+        >
+        <mat-error *ngIf="displayMessage.startRating">
+            {{displayMessage.startRating}}
+        </mat-error>
+    </mat-form-field>
+    <div>
+        <button [disabled]='!formData.valid || !formData.dirty' mat-button type="submit" [mat-dialog-close]='formData.value'>Update </button>
+        <button mat-button type="button" (click)="onNoClick()">Close</button>
+    </div>
+   
+</form>

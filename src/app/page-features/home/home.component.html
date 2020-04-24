@@ -1,0 +1,27 @@
+<!-- <app-item [data]="data"></app-item> -->
+
+<div class="row">
+    <div class="col-8">
+        <ng-container  *ngFor="let post of posts">
+            <!-- <mat-card class="example-card">
+                <mat-card-title>{{post.title}}</mat-card-title>
+                <mat-card-subtitle>{{post.date}}</mat-card-subtitle>
+                <mat-card-content>
+                    <p>
+                        {{post.description}}
+                    </p>
+                  </mat-card-content>
+            </mat-card> -->
+            <div class=post>
+                <a class="title" [href]="post.href" target="_blank">{{post.title}}</a>
+                <p>{{post.date}}</p>
+                <p>{{post.description}}</p>
+            </div>
+            <hr>
+        </ng-container>
+    </div>
+   
+    <div class="col-4">
+       
+    </div>
+</div>
